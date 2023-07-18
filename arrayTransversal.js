@@ -60,3 +60,28 @@ function arrayTransversalWithExtraSpace(nums, k) {
 let arrayTransversalWithExtraSpaceResult = arrayTransversalWithExtraSpace([1, 2, 3, 4, 5, 6, 7], 10);
 
 console.log(arrayTransversalWithExtraSpaceResult);
+
+
+/* ===== Array transversal 3 ===== */
+
+
+function arrayTransversalWithoutExtraSpace(nums, k) {
+
+    let n = nums.length;
+
+    k = k % n;
+
+    for (let i = 0; i < k; i++) {
+
+        nums.unshift(nums[n - 1]);
+        nums.pop();
+
+    }
+
+    return nums;
+
+}
+
+let arrayTransversalWithoutExtraSpaceResult = arrayTransversalWithoutExtraSpace([-1, -100, 3, 99], 4);
+
+console.log(arrayTransversalWithoutExtraSpaceResult);
